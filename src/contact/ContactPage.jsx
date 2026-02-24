@@ -45,6 +45,7 @@ const ContactPage = () => {
             stiffness:100,
             damping:10
           }}
+          viewport={{once:true}}
            
            className='text-4xl font-bold text-gray-600 font-mono'>Contact Us to buy our products from anywhere
           </motion.h1>
@@ -58,9 +59,9 @@ const ContactPage = () => {
           }}
            className='flex items-center gap-5'>
 
-            <input className='w-[140px] lg:w-[150px] px-4 py-2 border-[1px] border-gray-400 rounded-md' type="text" placeholder="Name"/>
+            <input className='w-[140px] lg:w-[150px] px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder="Name"/>
 
-            <input className='w-[200px] lg:w-[280px] px-4 py-2 border-[1px] border-gray-400 rounded-md' type="email" placeholder='Email'/>
+            <input className='w-[200px] lg:w-[280px] px-4 py-2 border border-gray-400 rounded-md' type="email" placeholder='Email'/>
 
           </motion.div>
 
@@ -72,9 +73,9 @@ const ContactPage = () => {
           }}
           className='flex items-center gap-5'>
 
-            <input className='w-[140px] lg:w-[150px] px-4 py-2 border-[1px] border-gray-400 rounded-md' type="text" placeholder="Country"/>
+            <input className='w-[140px] lg:w-[150px] px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder="Country"/>
 
-            <input className='w-[200px] lg:w-[280px] px-4 py-2 border-[1px] border-gray-400 rounded-md' type="text" placeholder='Zipcode'/>
+            <input className='w-[200px] lg:w-[280px] px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder='Zipcode'/>
 
           </motion.div>
           <button className='px-2 py-2 text-lg font-bold bg-gray-600 text-white w-[365px] lg:w-[450px] rounded-lg hover:bg-gray-700 hover:text-orange-400'>{result?result:"Contact"}</button>
@@ -82,12 +83,15 @@ const ContactPage = () => {
         </div>
        
 
-        <div className='container w-120 '>
+        <div className='container w-120 relative'>
 
-          <motion.img initial={{opacity:0,scale:0.5}} 
+          <motion.div initial={{opacity:0,scale:0.5}} 
           whileInView={{opacity:1,scale:1}}
           transition={{type:'spring',stiffness:100,damping:10,delay:1}}
-           className=" w-[400px] md:w-[400px] lg:w-auto shadow-xl/60 rounded-md block " src={assets.upback}></motion.img>
+           className="absolute inset-0 w-[400px] md:w-[400px] lg:w-auto shadow-xl/60 rounded-md block ">
+            <img src={assets.upback} className='w-full h-full rounded-md'/>
+
+           </motion.div>
 
         </div>
       </div>
