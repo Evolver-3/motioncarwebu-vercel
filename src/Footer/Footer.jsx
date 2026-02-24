@@ -4,21 +4,58 @@ import {motion} from 'motion/react'
 
 const Footer = () => {
 
+  const containerVariant={
+    hidden:{},
+    show:{
+      transition:{
+        staggerChildren:0.5,
+        delay:0.8
+      }
+    }
+  }
+
+  const childVariant={
+    hidden:{
+      opacity:0,
+      y:20
+    },
+    show:{
+      opacity:1,
+      y:0,
+      transition:{
+        duration:0.5,
+        ease:"easeOut"
+      }
+    }
+  }
+
+  const animateVariant={
+    hidden:{
+      opacity:0,
+      y:20
+    },
+    show:{
+      opacity:1,
+      y:0,
+      type:"spring",
+      stiffness:120,
+      mass:10,
+      transition:{
+        duration:0.4
+      }
+    }
+  }
+
   return (
     <div className='bg-yellow-800 pt-15 pb-10 text-white w-full'>
       <div className='container'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-14'>
 
           <motion.div
-          initial={{opacity:0,y:100}}
-            whileInView={{opacity:1,y:0}}
-            transition={{
-              type:"spring",
-              stiffness:100,
-              damping:10,
-              delay:0.4,
-              duration:0.6
-            }}
+          variants={animateVariant}
+          initial="hidden"
+          animate="show"
+          viewport={{once:true}}
           className='space-y-6'>
             <h1 
             className='text-2xl font-bold text-gray-700'>
@@ -40,15 +77,10 @@ const Footer = () => {
           </motion.div>
           
           <motion.div 
-          initial={{opacity:0,y:100}}
-            whileInView={{opacity:1,y:0}}
-            transition={{
-              type:"spring",
-              stiffness:100,
-              damping:10,
-              delay:0.4,
-              duration:.6
-            }}
+          variants={animateVariant}
+          initial='hidden'
+          animate='show'
+          viewport={{once:true}}
           className="space-y-6">
             <h3
             className='text-2xl font-bold text-gray-700'> Quick Links</h3>
@@ -66,57 +98,30 @@ const Footer = () => {
           </motion.div>
 
           <motion.div
-          initial={{opacity:0,y:100}}
-            whileInView={{opacity:1,y:0}}
-            transition={{
-              type:"spring",
-              stiffness:100,
-              damping:10,
-              delay:0.4,
-              duration:.6
-            }}
+          variants={containerVariant}
+          initial='hidden'
+          animate='show'
+          viewport={{once:true}}
           className='space-y-6'>
             <h1
-            
              className='text-2xl font-bold text-gray-700' >
               Follow Us
              </h1>
-            <div className='flex gap-2 '> 
+
+            <motion.div className='flex gap-2 '> 
               <motion.img 
-               initial={{opacity:0,y:100}}
-                 whileInView={{opacity:1,y:0}}
-                 transition={{
-                  type:"spring",
-                  stiffness:100,
-                  damping:10,
-                  delay:.5,
-                  duration:.7
-            }}
+              variants={childVariant}
               className='w-10' src={assets.fb}/>
+
               <motion.img 
-               initial={{opacity:0,y:100}}
-                 whileInView={{opacity:1,y:0}}
-                 transition={{
-                  type:"spring",
-                  stiffness:100,
-                  damping:10,
-                  delay:.6,
-                  duration:.7
-            }}
+              variants={childVariant}
               className='w-10' src={assets.insta}/>
+
               <motion.img 
-               initial={{opacity:0,y:100}}
-                 whileInView={{opacity:1,y:0}}
-                 transition={{
-                  type:"spring",
-                  stiffness:100,
-                  damping:10,
-                  delay:.7,
-                  duration:.7
-            }}
+              variants={childVariant}
               className='w-10' src={assets.tele}/>
               
-            </div>
+            </motion.div>
           </motion.div>
 
         </div>
