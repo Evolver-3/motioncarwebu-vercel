@@ -1,10 +1,31 @@
 import {motion} from 'motion/react'
 import { assets } from '../assets'
-import React from 'react';
+import React from 'react'
+const ContactPage = () =>{
 
+  const containerVariant={
+    hidden:{},
+    show:{
+      transition:{
+        staggerChildren:0.9,
+        delay:0.2
+      }
+    }
+  }
 
-
-const ContactPage = () => {
+  const childVariant={
+    hidden:{
+      x:-100,
+      opacity:0
+    },
+    show:{
+      x:0,
+      opacity:1,
+      transition:{
+        duration:0.8
+      }
+    }
+  }
 
    const [result, setResult] = React.useState("");
 
@@ -41,9 +62,7 @@ const ContactPage = () => {
           whileInView={{opacity:1,y:0}}
           transition={{
             delay:0.6,
-            type:"spring",
-            stiffness:100,
-            damping:10
+            ease:"easeOut"
           }}
           viewport={{once:true}}
            
@@ -51,33 +70,40 @@ const ContactPage = () => {
           </motion.h1>
 
           <form onSubmit={onSubmit} className='gap-5  md:gap-10 flex flex-col w-full'>
-          <motion.div 
-          initial={{opacity:0, y:-100 }}
-          whileInView={{opacity:1,y:0}}
-          transition={{
-            delay:0.7,
-          }}
-           className='flex items-center gap-5'>
 
-            <input className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder="Name"/>
+          <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show" 
+           className='flex items-center gap-5 overflow-hidden'>
 
-            <input className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="email" placeholder='Email'/>
+            <motion.input
+            variants={childVariant}
+            className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder="Name"/>
+
+            <motion.input 
+            variants={childVariant}
+            className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="email" placeholder='Email'/>
+
+          </motion.div>
+
+          <motion.div
+          variants={containerVariant}
+          initial="hidden"
+          whileInView="show" 
+          className='flex items-center gap-5 overflow-hidden'>
+
+            <motion.input
+            variants={childVariant}
+            className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder="Country"/>
+
+            <motion.input
+            variants={childVariant}
+            className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder='Zipcode'/>
 
           </motion.div>
 
-          <motion.div 
-          initial={{opacity:0, y:-100 }}
-          whileInView={{opacity:1,y:0}}
-          transition={{
-            delay:0.8,
-          }}
-          className='flex items-center gap-5'>
 
-            <input className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder="Country"/>
-
-            <input className='w-1/2 md:w-2/3 px-4 py-2 border border-gray-400 rounded-md' type="text" placeholder='Zipcode'/>
-
-          </motion.div>
           <button className=' w-full px-5 py-1.5 text-lg font-bold bg-gray-600 text-white rounded-lg hover:bg-gray-700 hover:text-orange-400'>{result?result:"Contact"}</button>
           </form>
         </div>
@@ -85,9 +111,9 @@ const ContactPage = () => {
 
         <div className=' w-1/2'>
 
-          <motion.img initial={{opacity:0,scale:0.5}} 
+          <motion.img initial={{opacity:0,scale:0}} 
           whileInView={{opacity:1,scale:1}}
-          transition={{type:'spring',stiffness:100,damping:10,delay:1}}
+          transition={{ease:"easeOut",delay:0.3,duration:1}}
            className=" w-full h-full shadow-xl/60 rounded-md block " src={assets.upback}>
            </motion.img>
 
