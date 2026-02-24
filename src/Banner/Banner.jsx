@@ -4,9 +4,11 @@ import {motion} from 'motion/react'
 const Banner = () => {
   return (
     <div className='container my-20'>
-      <div className='background-image sm:min-h-[400px] sm:flex sm:justify-end sm:items-center rounded-lg'>
+      <div className='background-image sm:min-h-[400px] sm:flex sm:justify-end sm:items-center rounded-lg text-white'>
         <div className="">
-          <div className="space-y-5 max-w-xl mx-auto ">
+          <motion.div
+          viewport={{once:true}}
+          className="space-y-5 max-w-xl mx-auto ">
 
             <motion.h1 
             initial={{opacity:0,y:100}}
@@ -17,7 +19,7 @@ const Banner = () => {
               damping:10,
               delay:.3
             }}
-            className="text-2xl text-center sm:text-4xl font-semibold">Download the app
+            className="text-6xl text-center md:text-8xl font-semibold leading-tight">Download the app
             </motion.h1>
 
             <motion.p 
@@ -28,11 +30,11 @@ const Banner = () => {
               stiffness:100,
               damping:10,
               delay:.4
-            }} className="text-center text-sm sm:px-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, ipsa?
+            }} className="text-center text-xl md:text-3xl sm:px-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, ipsa?
 
             </motion.p>
 
-            <div  className="flex justify-center gap-4 item-center">
+            <div  className="flex justify-center gap-20 item-center">
               <a href="#" className="max-w-[150px] sm:max-w-[120px] md:max-w-[200px]">
                 <motion.img
                  initial={{opacity:0,y:100}}
@@ -55,7 +57,7 @@ const Banner = () => {
                   }} src={assets.apple}/>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
       </div>
