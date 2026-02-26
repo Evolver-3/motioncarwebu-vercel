@@ -7,7 +7,7 @@ import Section from "./sec/Section"
 
 const App = () => {
   return (
-    <div className="flex flex-col justify-center items-center  ">
+    <div className="flex flex-col  ">
 
     <Hero/>
     <Section/>

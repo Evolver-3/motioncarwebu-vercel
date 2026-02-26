@@ -35,19 +35,9 @@ const Section = () => {
         </motion.p>
       </div>
 
-      <motion.div variants={containerVarient} initial="hidden" whileInView={"visible"} viewport={{amount:.1}} className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7  place-items-center'>
-        {secData.map((item)=>(
-          <motion.div variants={cardVarient} key={item.id} className=' text-center space-y-5'>
-            <img className='shadow-2xl' src={item.image}></img>
+      <div className='w-full h-full bg-black container'>
 
-            <div className='space-y-2 '>  
-            <h2 className='text-2xl font-bold text-orange-400'>{item.title}</h2>
-            <p className='text-gray-500 text-sm '>{item.subtitle}</p>
-            </div>
-            
-          </motion.div>
-        ))}
-      </motion.div>
+      </div>
 
     </div>
   )

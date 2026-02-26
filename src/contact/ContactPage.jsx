@@ -55,8 +55,8 @@ const ContactPage = () =>{
     }
   };
   return (
-    <div className='container my-10 px-3' id='Contact'>
-      <div className='flex gap-4 md:gap-5'>
+    <div className='container my-10 px-5 w-full bg-rose-100' id='Contact'>
+      <div className='flex gap-4 md:gap-5 items-center justify-center'>
 
         <div className='space-y-8 w-1/2'>
           <motion.h1 initial={{opacity:0, y:-100 }}
@@ -111,12 +111,6 @@ const ContactPage = () =>{
        
 
         <div className=' w-1/2'>
-
-          {/* <motion.img initial={{opacity:0,scale:0}} 
-          whileInView={{opacity:1,scale:1}}
-          transition={{ease:"easeOut",delay:0.3,duration:1}}
-           className=" w-full h-full shadow-xl/60 rounded-md block " src={assets.upback}>
-           </motion.img> */}
 
            <PhoneCard/>
 
