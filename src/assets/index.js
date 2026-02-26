@@ -20,9 +20,14 @@ import tatapunch from './tata-punch.avif'
 import tatasierra from './tata-sierra.avif'
 import scorpio from './scorpio.avif'
 
+import bmwonefront from './bmwfront1.avif'
+import bmwoneside from './bmwside1.avif'
+
+import ducati from './ducati.png'
+
 
 export const assets={
-  menu,car,facebook,insta,twitter,car1,car2,car3,upback,backu,google,apple,phone,loca,tele,fb,tatapunch,tatasierra,scorpio
+  menu,car,facebook,insta,twitter,car1,car2,car3,upback,backu,google,apple,phone,loca,tele,fb,tatapunch,tatasierra,scorpio,bmwonefront,bmwoneside,ducati
 }
 
 export const secData=[

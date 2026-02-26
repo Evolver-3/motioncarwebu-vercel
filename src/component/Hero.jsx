@@ -15,9 +15,9 @@ const Hero = () => {
   return (
     <main className='bg-[linear-gradient(to_right,#6b7280_50%,#9ca3af_50%)]' id='Home'>
 
-      <section className='relative min-h-[750px] w-full'>
+      <section className='relative min-h-[700px] w-full'>
 
-        <div className='items-center sm:px-[2rem]'>
+        <div className='items-center sm:px-8'>
 
           <Navbar open={open} setIsOpen={setIsOpen}/>
 
