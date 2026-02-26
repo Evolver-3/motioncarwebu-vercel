@@ -1,6 +1,7 @@
 import {motion} from 'motion/react'
 import { assets } from '../assets'
 import React from 'react'
+import PhoneCard from './PhoneCard'
 const ContactPage = () =>{
 
   const containerVariant={
@@ -111,11 +112,13 @@ const ContactPage = () =>{
 
         <div className=' w-1/2'>
 
-          <motion.img initial={{opacity:0,scale:0}} 
+          {/* <motion.img initial={{opacity:0,scale:0}} 
           whileInView={{opacity:1,scale:1}}
           transition={{ease:"easeOut",delay:0.3,duration:1}}
            className=" w-full h-full shadow-xl/60 rounded-md block " src={assets.upback}>
-           </motion.img>
+           </motion.img> */}
+
+           <PhoneCard/>
 
         </div>
       </div>
