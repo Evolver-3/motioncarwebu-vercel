@@ -51,12 +51,18 @@ const PhoneCard = () => {
             Call us
         </button>
 
+        <span className='absolute bottom-px w-15 h-0.5 rounded-t-xl bg-neutral-600'></span>
+
         </motion.div>
 
       <div className="absolute left-25 top-0.5 h-full w-full -translate-x-1/2 rounded-2xl bg-violet-500 
       -z-10" />
 
       </div>
+
+      
+
+     
       
 
     </div>
