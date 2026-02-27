@@ -15,40 +15,29 @@ import loca from './loca.svg'
 import tele from './tele.svg'
 import fb from './fb.svg'
 
+import redM2 from './M2model/RedM2.avif'
+import blackM2 from './M2model/blackM2.avif'
+import grayM2 from './M2model/grayM2.avif'
+import lightM2 from './M2model/GreyM2.avif'
+import BlueM2 from './M2model/BlueM2.avif'
 
-import tatapunch from './tata-punch.avif'
-import tatasierra from './tata-sierra.avif'
-import scorpio from './scorpio.avif'
+import M5 from './M5.avif'
 
-import bmwonefront from './bmwfront1.avif'
-import bmwoneside from './bmwside1.avif'
+import sapphire from './7Series/7sapphire.avif'
+import white from './7Series/7white.avif'
+import blue from './7Series/7blue.avif'
+import Gray from './7Series/7Gray.avif'
+import grey from './7Series/7grey.avif'
 
-import ducati from './ducati.png'
+
+
+
+
 
 
 export const assets={
-  menu,car,facebook,insta,twitter,car1,car2,car3,upback,backu,google,apple,phone,loca,tele,fb,tatapunch,tatasierra,scorpio,bmwonefront,bmwoneside,ducati
+  menu,car,facebook,insta,twitter,car1,car2,car3,upback,backu,google,apple,phone,loca,tele,fb,redM2,redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey
 }
 
-export const secData=[
-{
-  id:1,
-  image:assets.tatapunch,
-  subtitle:"One of India’s best-selling cars, the Tata Punch, has received its first-ever major update. The 2026 Tata Punch facelift gets bolder exterior styling, a modernised cabin inspired by the Punch EV, and most importantly an all-new 1.2-litre turbo-petrol engine delivering 120 PS and 170 Nm. To add convenience, the carmaker has also provided it with a CNG AMT combination.",
-  price:"Rs. 5.60 - 10.55 Lakh*"
-},
-{
-  id:1,
-  image:assets.tatasierra,
-  subtitle:"The 2025 Tata Sierra has been launched at an introductory price of Rs 11.49 Lakh (ex-showroom). It will be offered in 4 broad Personas: Smart+, Pure, Adventure & Accomplished across 3 engine and 5 transmission options. Tata Sierra Pure variant price starts at Rs 12.99 lakh, whereas Tata Sierra Adventure variant price starts at Rs 15.29 lakh (ex-showroom). The Sierra will compete in the compact SUV space with cars like Hyundai Creta, Kia Seltos and Maruti Victoris.",
-  price:"Rs. 11.49 - 21.29 Lakh*"
-},
-{
-  id:1,
-  image:assets.scorpio,
-  subtitle:"Mahindra Scorpio N is amongst the most popular 7-seater SUVs in India, known for its tough build quality, reliable engines and off-road capabilities.The 2025 Scorpio N has a simple, old-school SUV design blended with modern elements such as projector headlights, LED daytime running lamps, 18-inch alloy wheels and vertically-stacked tail lamps. The Scorpio N Carbon is available for those who prefer an all-black look. ",
-  price:"Rs. 13.49 - 24.34 Lakh*"
-}
-]
 
 const URL="51c9982a-0f14-44f3-8301-421087f530a8";
