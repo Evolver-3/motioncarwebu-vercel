@@ -14,7 +14,7 @@ const PhoneCard = () => {
         <motion.div
         initial={{ x:-7, y:0, rotateX:0, rotateY:0, translateZ:0 }}
         animate={{ x:-10, y:5, rotateX:0, rotateY:0, translateZ:40 }}
-        transition={{
+        transition={{ 
           repeat:Infinity,
           repeatType:"mirror",
           duration:2,
@@ -55,7 +55,7 @@ const PhoneCard = () => {
 
         </motion.div>
 
-      <div className="absolute left-25 top-0.5 h-full w-full -translate-x-1/2 rounded-2xl bg-violet-500 
+      <div className="absolute left-25 -top-0.5 h-91 w-full -translate-x-1/2 rounded-2xl bg-violet-500 
       -z-10" />
 
       </div>

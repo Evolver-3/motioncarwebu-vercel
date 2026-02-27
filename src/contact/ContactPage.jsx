@@ -55,7 +55,7 @@ const ContactPage = () =>{
     }
   };
   return (
-    <div className='container my-10 px-5 w-full bg-rose-100' id='Contact'>
+    <div className=' my-10 px-10  w-full bg-rose-100' id='Contact'>
       <div className='flex gap-4 md:gap-5 items-center justify-center'>
 
         <div className='space-y-8 w-1/2'>
@@ -110,7 +110,7 @@ const ContactPage = () =>{
         </div>
        
 
-        <div className=' w-1/2'>
+        <div className='w-1/2'>
 
            <PhoneCard/>
 
