@@ -25,22 +25,37 @@ const Navbar = () => {
   const containerVariant={
     hidden:{
       opacity:0,
-      scale:0,
+      scale:0
+    },
+    show:{
+      opacity:1,
+      scale:1,
+      transition:{
+        duration:1,
+        delay:0.7,
+        ease:"easeInOut"
 
+      }
     }
   }
 
   
   return (
     <motion.div
-    
+    variants={containerVariant}
+    initial="hidden"
+    whileInView="show"
+    viewport={{once:true}}
+    style={{
+      transformOrigin:"center"
+    }}
     className='w-full rounded-xl bg-neutral-500 text-sm capatalize flex items-center  justify-between px-2 py-1'>
 
       <img src={assets.bmwLogo} className='w-10 h-10'/>
 
       <div className='text-sm capitalize flex gap-3 text-neutral-50 items-center'>
         {navItems.map((item,index)=>(
-          <motion.div key={item.id} className='text-[12px] font-sans hover:text-white cursor-pointer hover:bg-neutral-600 px-1 py-1 rounded-sm hover:scale-105 transition-all duration-100 active:scale-95 active:text-blue-300'>
+          <motion.div key={item.id} className='text-[12px] font-sans hover:text-white cursor-pointer hover:bg-neutral-600 px-1 py-1 rounded-sm hover:scale-105 transition-all duration-300 active:scale-95 active:text-blue-300 ease-in-out'>
             {item.title}
           </motion.div>
         ))}
