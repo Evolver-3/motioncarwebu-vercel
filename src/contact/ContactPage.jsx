@@ -76,6 +76,7 @@ const ContactPage = () =>{
           variants={containerVariant}
           initial="hidden"
           whileInView="show" 
+          viewport={{once:true}}
            className='flex items-center gap-5 overflow-hidden'>
 
             <motion.input
@@ -92,6 +93,7 @@ const ContactPage = () =>{
           variants={containerVariant}
           initial="hidden"
           whileInView="show" 
+          viewport={{once:true}}
           className='flex items-center gap-5 overflow-hidden'>
 
             <motion.input
