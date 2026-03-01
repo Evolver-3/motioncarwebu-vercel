@@ -49,7 +49,7 @@ const Navbar = () => {
     style={{
       transformOrigin:"center"
     }}
-    className='w-full rounded-xl bg-neutral-500 text-sm capatalize flex items-center  justify-between px-2 py-1'>
+    className='w-full rounded-xl bg-neutral-500 text-sm capatalize flex items-center  justify-between px-2 py-1 '>
 
       <img src={assets.bmwLogo} className='w-10 h-10'/>
 

@@ -36,7 +36,7 @@ const Gallery = () => {
 
   return (
 
-      <div className='grid grid-cols-4 gap-1 my-2'>
+      <div className='grid sm:grid-cols-4 grid-cols-3 gap-1 my-2'>
         {imagePosition.map((img)=>(
           <motion.div
           key={img}
@@ -46,7 +46,7 @@ const Gallery = () => {
             type:"spring",
             stiffness:30
           }}
-          className='w-full h-45 overflow-hidden rounded-sm bg-no-repeat bg-cover'
+          className='w-full h-33 sm:h-45 overflow-hidden rounded-sm bg-no-repeat bg-cover'
           style={{
             backgroundImage:`url(${img})`
           }}
