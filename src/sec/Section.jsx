@@ -100,11 +100,10 @@ const Section = () => {
       >
         <Info/>
 
-
           <motion.div className=' flex flex-col relative z-20  text-neutral-200 font-bold font-serif text-shadow-md' key={carItems[currentIdx].id}>
 
 
-            <h2 className='text-[250px] leading-none'>BMW</h2>
+            <h2 className='sm:text-[250px] text-9xl leading-none'>BMW</h2>
             <h5 className='text-5xl font-mono'>{carItems[currentIdx].model}</h5>
 
 
@@ -123,7 +122,7 @@ const Section = () => {
             initial={{opacity:0, scale:0.5}}
             animate={{opacity:1, scale:1}}
             exit={{opacity:0, scale:0.5}}
-            className='absolute -right-1/4 top-1/2 w-sm h-90 rounded-md ring ring-neutral-400 bg-neutral-300 text-black'>
+            className='absolute -right-1/4 top-1/2  rounded-md ring ring-neutral-400 bg-neutral-300 text-black py-10 px-5'>
 
               <ColComp car={currentCar} setSelectedImage={setSelectedImage}/>
               <InfoComp car={currentCar}/>

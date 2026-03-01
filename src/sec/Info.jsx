@@ -46,7 +46,7 @@ const Info = () => {
   },[])
   return (
     <>
-    <svg className='absolute top-5 right-10 text-white' xmlns="http://www.w3.org/2000/svg"
+    <svg className='absolute -top-5 right-10 text-white' xmlns="http://www.w3.org/2000/svg"
       onClick={()=>setAutoShow(!autoShow)}
       width="35" height="35"  
         fill="currentColor" viewBox="0 0 24 24" >
@@ -62,7 +62,7 @@ const Info = () => {
         whileInView="show"
         exit="exit"
       
-      className='absolute top-5 right-18 w-60 h-7 bg-neutral-100 rounded-xl px-2 text-center py-0.5 text-neutral-700 text-md'>Click on the cars to check info</motion.span>
+      className='absolute -top-5 right-18 w-60 h-7 bg-neutral-100 rounded-xl px-2 text-center py-0.5 text-neutral-700 text-md'>Click on the cars to check info</motion.span>
       )}
       </AnimatePresence>
 
