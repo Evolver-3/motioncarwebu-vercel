@@ -1,11 +1,9 @@
 import menu from './menu.svg'
-import car from './car.png'
+
 import facebook from './facebook.svg'
 import insta from './insta.svg'
 import twitter from './twitter.svg'
-import car1 from './car1.png'
-import car2 from './car2.png'
-import car3 from './car3.jpg'
+
 import upback from './upback.jpg'
 import backu from './backu.jpg'
 import google from './google.png'
@@ -30,13 +28,27 @@ import Gray from './7Series/7Gray.avif'
 import grey from './7Series/7grey.avif'
 
 
+import bmwLogo from './bmw.svg'
+import bmwWall from './bmwWall.avif'
 
+import wall1 from './wallpaper/wallOne.jpg'
+import wall2 from './wallpaper/wallTwo.jpg'
+import wall3 from './wallpaper/wallThree.jpg'
+import wall4 from './wallpaper/wallFour.jpg'
+import wall5 from './wallpaper/wall5.jpg'
+import wall6 from './wallpaper/wall6.jpg'
+import wall7 from './wallpaper/wall7.jpg'
+import wall8 from './wallpaper/wall8.jpg'
+import wall9 from './wallpaper/wall9.jpg'
+import wall10 from './wallpaper/wall10.jpg'
+import wall11 from './wallpaper/wall11.jpg'
+import wall12 from './wallpaper/wall12.jpg'
 
 
 
 
 export const assets={
-  menu,car,facebook,insta,twitter,car1,car2,car3,upback,backu,google,apple,phone,loca,tele,fb,redM2,redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey
+  menu,facebook,insta,twitter,upback,backu,google,apple,phone,loca,tele,fb,redM2,redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,bmwLogo,bmwWall,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12
 }
 
 
