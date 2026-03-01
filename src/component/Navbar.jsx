@@ -25,11 +25,11 @@ const Navbar = () => {
   const containerVariant={
     hidden:{
       opacity:0,
-      scale:0
+      y:-10
     },
     show:{
       opacity:1,
-      scale:1,
+      y:0,
       transition:{
         duration:1,
         delay:0.7,
