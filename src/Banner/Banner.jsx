@@ -26,8 +26,8 @@ const Banner = () => {
   }
 
   return (
-    <div className='w-full my-20 px-4'>
-      <div className="background-image px-10 w-full h-full sm:min-h-[400px] sm:flex sm:justify-end sm:items-center rounded-lg text-white">
+    <div className='w-full my-20'>
+      <div className="background-image  w-full h-full sm:min-h-[400px] sm:flex sm:justify-end sm:items-center rounded-lg text-white">
     
         <div className="">
           <motion.div
