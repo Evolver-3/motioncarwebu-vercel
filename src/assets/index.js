@@ -45,10 +45,12 @@ import wall11 from './wallpaper/wall11.jpg'
 import wall12 from './wallpaper/wall12.jpg'
 
 
+import sign from './signBmw.webp'
+
 
 
 export const assets={
-  menu,facebook,insta,twitter,upback,backu,google,apple,phone,loca,tele,fb,redM2,redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,bmwLogo,bmwWall,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12
+  menu,facebook,insta,twitter,upback,backu,google,apple,phone,loca,tele,fb,redM2,redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,bmwLogo,bmwWall,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12,sign
 }
 
 

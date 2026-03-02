@@ -19,7 +19,6 @@ const carItems=[
     ],
     model:"M2 series",
     specs:{
-      
       price:"₹1.03Cr",
       Fuel:"Petrol",
       engine:"2993 cc",
@@ -33,7 +32,6 @@ const carItems=[
     image:assets.M5,
     model:"M5 xDrive",
     specs:{
-      
       price:"₹1.99 Cr",
       Fuel:"Petrol",
       engine:"4395 cc",
@@ -54,7 +52,6 @@ const carItems=[
     },
     model:"7 Series",
     specs:{
-      
       price:"₹1.81 Cr",
       Fuel:"Petrol, Diesel",
       engine:"2998 cc",
@@ -100,12 +97,11 @@ const Section = () => {
       >
         <Info/>
 
-          <motion.div className=' flex flex-col relative z-20  text-neutral-200 font-bold font-serif text-shadow-md' key={carItems[currentIdx].id}>
+          <motion.div className=' flex flex-col relative z-20  text-neutral-200 font-bold font-serif text-shadow-md' key={currentCar.id}>
 
 
             <h2 className='sm:text-[250px] text-9xl leading-none'>BMW</h2>
             <h5 className='text-5xl font-mono'>{carItems[currentIdx].model}</h5>
-
 
              <motion.img
                 animate={{

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
-import { assets } from '../assets'
 import Gallery from './Gallery'
+import {AnimatePresence, motion} from 'motion/react'
 
 const headings=[
   {
@@ -31,8 +31,6 @@ const Hero = () => {
    return ()=>clearInterval(interval)
   },[])
 
-
-
   return (
     <div className='w-full bg-red-200 h-screen'>
 
@@ -40,9 +38,11 @@ const Hero = () => {
 
         <Navbar/>
 
-        <div className='flex gap-2 pb-1'>
-          <div className='w-1/2 h-140 rounded-xl bg-green-200 flex flex-col items-center justify-around py-10'
-          key={headInx.id}>
+       <AnimatePresence mode='wait'>
+         <div className='flex gap-2 pb-1 '>
+          <div className='w-1/2 h-141 rounded-xl bg-green-200 flex flex-col items-center justify-around py-10 glass'
+          key={headInx.id}
+         >
 
             <h2 className='sm:text-6xl text-4xl text-center'>{headInx.head}</h2>
             <div className='flex  px-5'>
@@ -50,15 +50,13 @@ const Hero = () => {
             <button>
               <i className="bx bx-arrow-in-up-right-circle" />
             </button>
-            </div>
-
-          
-          </div>
+            </div></div>
 
           <div className='w-1/2 h-140 rounded-xl bg-rose-100 px-2'>
             <Gallery/>
           </div>
         </div>
+       </AnimatePresence>
 
       </div>
 
