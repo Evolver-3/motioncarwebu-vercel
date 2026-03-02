@@ -1,134 +1,101 @@
 
+import { useState } from 'react'
 import { assets } from '../assets'
 import {motion} from 'motion/react'
 
+const footerData=[
+  {
+    id:1,
+    text:"Contact & Info",
+    subText:[
+      "Customer support","Online Genius (FAQ)","Accident Support","Request for Offer"
+    ]
+  },
+  {
+    id:2,
+    text:"Experience BMW",
+    subText:["About us","BMW careers","BMW.com","BMW Group","BMW Chennai Plain"
+    ]
+  },
+  {
+    id:3,
+    text:"Assistance & Services",
+    subText:["BMW X series","BMW 7 series","BMW 5 series","BMW 3 series","BMW 2 series","BMW M series","BMW Concept Cars","BMW Protection Vehicles","GKL Cars"
+    ]
+  },
+  {
+    id:4,
+    text:"Choose & Buy",
+    subText:["Build your Own","New Cars Search","BMW Financial Services","Finance & Leasing","BMW Offers","Book a Test Drive"
+    ]
+  },
+  {
+    id:5,
+    text:"Models",
+    subText:["Book a Service Appointment","MY BMW App","Connected Drive","Warranties","Remote Software Upgrades"
+    ]
+    
+  },
+  {
+    id:6,
+    text:"BMW Electric Cars",
+    subText:["BMW Electric Vehicles"
+    ]
+  },
+
+]
+
 const Footer = () => {
-
-  const containerVariant={
-    hidden:{},
-    show:{
-      transition:{
-        staggerChildren:0.5,
-        delay:0.8
-      }
-    }
-  }
-
-  const childVariant={
-    hidden:{
-      opacity:0,
-      y:20
-    },
-    show:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:0.5,
-        ease:"easeOut"
-      }
-    }
-  }
-
-  const animateVariant={
-    hidden:{
-      opacity:0,
-      y:20
-    },
-    show:{
-      opacity:1,
-      y:0,
-      type:"spring",
-      stiffness:120,
-      mass:10,
-      transition:{
-        duration:0.4
-      }
-    }
-  }
-
+  const [open,setOpen]=useState(null)
   return (
-    <div className='bg-rose-200 pt-15 pb-10 text-white w-full'>
-      <div className='container'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-14'>
+    <div className='bg-neutral-100  pb-10 text-black w-full'>
+      <div className='flex flex-col sm:flex-row gap-1 mx-3'>
+         <img src={assets.sign} className='size-20'/>
 
-          <motion.div
-          variants={animateVariant}
-          initial="hidden"
-          animate="show"
-          viewport={{once:true}}
-          className='space-y-6'>
-            <h1 
-            className='text-2xl font-bold text-gray-700'>
-              Death Relive.
-            </h1>
-            <p className='text-sm '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, id!</p>
+         <div className='font-sans flex flex-col sm:flex-row justify-between sm:items-center sm:justify-between pr-40 w-full pl-4 mb-5'>
 
-            <div>
-              <p className='flex items-center gap-2 text-sm'>
-                <img className='w-6' src={assets.phone}/>
-                +1 (123) 456-7890
-              </p>
-              <p className='flex items-center gap-2 text-sm'>
-                <img className='w-6' src={assets.loca}/>
-                Kanpur, Uttar Pradesh
-              </p>
-            </div>
-
-          </motion.div>
+          <h2 className='text-sm '>Stay up to date with the latest news from BMW</h2>
+          <h3 className='text-sm font-semibold flex items-center '>Sign up
+            <svg className='text-lg font-bold'  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="currentColor" viewBox="0 0 24 24" >
+            <path d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"></path>
+            </svg>
           
-          <motion.div 
-          variants={animateVariant}
-          initial='hidden'
-          animate='show'
-          viewport={{once:true}}
-          className="space-y-6">
-            <h3
-            className='text-2xl font-bold text-gray-700'> Quick Links</h3>
+            </h3>
+         </div>
 
-            <div className="grid grid-cols-1">
-              
-              <div>
-                <ul className='space-y-2'>
-                  <li ><a href='/#Home'>Home</a></li>
-                  <li><a href='/#Contact'>Contact</a></li>
-                  <li><a href='/#Section'>Section</a></li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-          variants={containerVariant}
-          initial='hidden'
-          animate='show'
-          viewport={{once:true}}
-          className='space-y-6'>
-            <h1
-             className='text-2xl font-bold text-gray-700' >
-              Follow Us
-             </h1>
-
-            <motion.div className='flex gap-2 '> 
-              <motion.img 
-              variants={childVariant}
-              className='w-10' src={assets.fb}/>
-
-              <motion.img 
-              variants={childVariant}
-              className='w-10' src={assets.insta}/>
-
-              <motion.img 
-              variants={childVariant}
-              className='w-10' src={assets.tele}/>
-              
-            </motion.div>
-          </motion.div>
-
-        </div>
       </div>
-       <p className='text-white text-center mt-8 py-10 mx-15 border-t-2'>
-          Copyright © 2025 Death Relive. All rights reserved 
-        </p>
+
+      <div className='w-full h-px bg-neutral-200'></div>
+
+      <div className=' grid grid-cols-1 sm:grid-cols-3 space-y-5 py-5'>
+
+        {footerData.map((data)=>(
+          <div>
+          <div className='flex justify-between px-5 hover:text-blue-600 active:text-blue-700 cursor-pointer space-y-1 mx-2' key={data.id}
+          onClick={()=>setOpen(open === data.id ? null :data.id)}>
+
+            <h2 className='text-lg font-mono'>{data.text}</h2>
+
+            <svg className={`sm:hidden transition-all duration-400 ${open === data.id ? "rotate-180 ": ""}`}             
+             xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="currentColor" viewBox="0 0 24 24" >
+            <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z"></path>
+            </svg>
+          </div>
+
+          <ul className={`mx-8 space-y-2 sm:space-y-5 mb-4 trasition-all sm:block ${open === data.id ? "block":"hidden"}`}>
+              {open ===data.id && data.subText.map((sub,idx)=>(
+                <li
+                key={idx}
+                className='text-sm leading-tight hover:text-blue-600 active:text-blue-700 cursor-pointer w-fit '>
+                  {sub}
+                </li>
+              ))}
+            </ul>
+            </div>
+        ))}
+        
+      </div>
+      
     </div>
   )
 }
