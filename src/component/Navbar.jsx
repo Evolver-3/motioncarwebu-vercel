@@ -14,10 +14,7 @@ const navItems=[
     id:3,title:"why us",Link:""
   },
   {
-    id:2,title:"Financing",Link:""
-  },
-  {
-    id:5,title:"Testimonials",Link:""
+    id:4,title:"Testimonials",Link:""
   }
 ]
 const Navbar = () => {
@@ -49,9 +46,9 @@ const Navbar = () => {
     style={{
       transformOrigin:"center"
     }}
-    className='w-full rounded-xl bg-neutral-500 text-sm capatalize flex items-center  justify-between px-2 py-1 '>
+    className='w-full rounded-xl bg-neutral-700 text-sm capatalize flex items-center  justify-between px-2 py-1 '>
 
-      <img src={assets.bmwLogo} className='w-10 h-10'/>
+      <img src={assets.logo} className='w-10 h-10'/>
 
       <div className='text-sm capitalize flex gap-3 text-neutral-50 items-center'>
         {navItems.map((item,index)=>(

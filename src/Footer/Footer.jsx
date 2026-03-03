@@ -105,11 +105,11 @@ const Footer = () => {
       <div className='flex flex-col sm:flex-row gap-2 mx-7 text-sm mt-5 sm:gap-10'>
         <h2>Copyright © BMW AG 2026</h2>
 
-        <div className='flex gap-5  hover:text-blue-600 active:text-blue-700'>
-          <h2>Legal Disclaimer/Imprint</h2>
-          <h2>Privacy Policy</h2>
-          <h2>Cookie Policy</h2>
-          <h2>Contact Us</h2>
+        <div className='flex gap-5 '>
+          <h2 className='cursor-pointer hover:text-blue-600 active:text-blue-700'>Legal Disclaimer/Imprint</h2>
+          <h2 className='cursor-pointer hover:text-blue-600 active:text-blue-700'>Privacy Policy</h2>
+          <h2 className='cursor-pointer hover:text-blue-600 active:text-blue-700'>Cookie Policy</h2>
+          <h2 className='cursor-pointer hover:text-blue-600 active:text-blue-700'>Contact Us</h2>
         </div>
       </div>
 

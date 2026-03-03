@@ -11,6 +11,7 @@ import blue from './7Series/7blue.avif'
 import Gray from './7Series/7Gray.avif'
 import grey from './7Series/7grey.avif'
 
+import M5 from './M5.webp'
 
 
 import wall1 from './wallpaper/wallOne.jpg'
@@ -28,11 +29,24 @@ import wall12 from './wallpaper/wall12.jpg'
 
 
 import sign from './signBmw.webp'
+import logo from './Bmwlogo.svg'
+
+import ele1 from './Ele/electric1.webp'
+
+import ele2 from './Ele/car2/Gray.webp'
+import blueele from './Ele/car2/blue.webp'
+import redele from './Ele/car2/crimson.webp'
+import greyele from './Ele/car2/grey.webp'
+import metalele from './Ele/car2/metallic.webp'
+import trans from './Ele/car2/Transparent.webp'
+import whiteele from './Ele/car2/white.webp'
+
+
 
 
 
 export const assets={
-  redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12,sign
+  redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12,sign,logo,ele1,ele2,blueele,redele,greyele,metalele,trans,whiteele,
 }
 
 

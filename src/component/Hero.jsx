@@ -43,11 +43,10 @@ const Hero = () => {
           <div className='w-1/2 h-141 rounded-xl bg-green-200 flex flex-col items-center justify-around py-10 glass'
           key={headInx.id}
          >
-
-            <h2 className='sm:text-6xl text-4xl text-center'>{headInx.head}</h2>
-            <div className='flex  px-5'>
-              <h2 className='text-sm'>{headInx.text}</h2>
-            <button>
+            <h2 className='sm:text-7xl text-4xl text-center '>{headInx.head}</h2>
+            <div className='flex flex-col items-start gap-5 px-5'>
+              <h2 className='text-md sm:text-xl'>{headInx.text}</h2>
+            <button className='text-3xl hover:text-blue-600 active:text-blue-700'>
               <i className="bx bx-arrow-in-up-right-circle" />
             </button>
             </div></div>
