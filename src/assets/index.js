@@ -50,4 +50,93 @@ export const assets={
 }
 
 
-const URL="51c9982a-0f14-44f3-8301-421087f530a8";
+
+export const carItems=[
+  { 
+    id:1,
+    image:assets.redM2,
+    imageVariant:[
+      assets.redM2,
+      assets.BlueM2,
+      assets.grayM2,
+      assets.lightM2,
+      assets.blackM2
+    ],
+    model:"M2 series",
+    specs:{
+      price:"₹1.03Cr",
+      Fuel:"Petrol",
+      engine:"2993 cc",
+      mileage:"10.13 km/l",
+      capacity:"4",
+      body:"Convertible"
+    }
+   },
+   { 
+    id:2,
+    image:assets.M5,
+    model:"M5 xDrive",
+    specs:{
+      price:"₹1.99 Cr",
+      Fuel:"Petrol",
+      engine:"4395 cc",
+      mileage:"9.1 km/l",
+      capacity:"5",
+      body:"Sedan"
+    }
+  },
+   { 
+    id:3,
+    image:assets.sapphire,
+    imageVariant:[
+      assets.sapphire,
+      assets.white,
+      assets.blue,
+      assets.Gray,
+      assets.grey
+   ],
+    model:"7 Series",
+    specs:{
+      price:"₹1.81 Cr",
+      Fuel:"Diesel",
+      engine:"2998 cc",
+      mileage:"12.61 km/l",
+      capacity:"5",
+      body:"Sedan"
+    }
+  },
+  { 
+    id:4,
+    image:assets.ele1,
+    model:"i5 M60 xDrive",
+    specs:{
+      Price:"₹1.26 Crore",
+      Fuel:"Electric",
+      Power:"600 hp",
+      Torque:"795 Nm",
+      Range:"455-516km",
+      Battery:"83 kWh",
+      Charging:"205 kW DC",
+      Capacity:"5",
+      body:"Sedan"
+    }
+   },
+   { 
+    id:5,
+    image:assets.ele2,
+    model:"iX xDrive50",
+    imageVariant:[
+      assets.ele2,assets.blueele,assets.redele,assets.greyele,assets.metalele,assets.trans,assets.whiteele
+    ],
+    specs:{
+      Price:"₹1.28 Crore",
+      Fuel:"Electric",
+      Torque:"795 Nm",
+      Range:"455-516km",
+      Battery:"76 kWh",
+      Charging:"205 kW DC",
+      Capacity:"5",
+      body:"Sedan"
+    }
+   },
+]
