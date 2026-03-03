@@ -55,7 +55,7 @@ const Footer = () => {
          <div className='font-sans flex flex-col sm:flex-row justify-between sm:items-center sm:justify-between pr-40 w-full pl-4 mb-5'>
 
           <h2 className='text-sm '>Stay up to date with the latest news from BMW</h2>
-          <h3 className='text-sm font-semibold flex items-center '>Sign up
+          <h3 className='text-sm font-semibold flex items-center hover:text-blue-600 active:text-blue-700 cursor-pointer'>Sign up
             <svg className='text-lg font-bold'  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="currentColor" viewBox="0 0 24 24" >
             <path d="m9.71 17.71 5.7-5.71-5.7-5.71-1.42 1.42 4.3 4.29-4.3 4.29z"></path>
             </svg>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
 
           <ul className={`mx-8 space-y-2 sm:space-y-5 mb-4 trasition-all sm:block ${open === data.id ? "block":"hidden"}`}>
-              {open ===data.id && data.subText.map((sub,idx)=>(
+              {data.subText.map((sub,idx)=>(
                 <li
                 key={idx}
                 className='text-sm leading-tight hover:text-blue-600 active:text-blue-700 cursor-pointer w-fit '>
@@ -95,6 +95,24 @@ const Footer = () => {
         ))}
         
       </div>
+
+      <div className='flex items-center justify-center'>
+
+      </div>
+
+      <div className='w-full h-px bg-neutral-200'></div>
+
+      <div className='flex flex-col sm:flex-row gap-2 mx-7 text-sm mt-5 sm:gap-10'>
+        <h2>Copyright © BMW AG 2026</h2>
+
+        <div className='flex gap-5  hover:text-blue-600 active:text-blue-700'>
+          <h2>Legal Disclaimer/Imprint</h2>
+          <h2>Privacy Policy</h2>
+          <h2>Cookie Policy</h2>
+          <h2>Contact Us</h2>
+        </div>
+      </div>
+
       
     </div>
   )

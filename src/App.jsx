@@ -1,4 +1,4 @@
-import Banner from "./Banner/Banner"
+
 import Hero from "./component/Hero"
 import ContactPage from "./contact/ContactPage"
 import Footer from "./Footer/Footer"
@@ -12,7 +12,7 @@ const App = () => {
     <Hero/>
     <Section/>
     <ContactPage/>
-    <Banner/>
+   
     <Footer/>
     
     
