@@ -9,6 +9,9 @@ const Section = () => {
   const [filter,setFilter]=useState("All")
   const sectionRef=useRef(null)
 
+  const [pickedCar,setPickedCar]=useState(null)
+
+
   useEffect(()=>{
     const onScreen=new IntersectionObserver(
       ([entry])=>{
@@ -35,14 +38,17 @@ const Section = () => {
 })
 
   return (
-    <div className='my-10 py-10 space-y-8  bg-linear-to-b from-sky-200 to-rose-200 via-sky-300 h-screen' id='Section'
+    <div className='my-10 py-10 space-y-8  bg-neutral-200 h-screen' id='Section'
     ref={sectionRef}>
       
-      <PublicBtn filter={filter} setFilter={setFilter}/>
+      {!pickedCar && (
+        <>
+        <PublicBtn filter={filter} setFilter={setFilter}/>
 
       <div className='grid grid-cols-3 '>
         {filteredCars.map((filtercar)=>(
-          <div key={filtercar.id} className='border border-neutral-300 flex sm:flex-row flex-col items-center'>
+          <div key={filtercar.id} className='border border-neutral-300 flex sm:flex-row flex-col items-center' 
+          onClick={()=>setPickedCar(!pickedCar)}>
            <img src={filtercar.image}
            alt={filtercar.model} className='size-50 px-2'/>
 
@@ -53,8 +59,12 @@ const Section = () => {
           </div>
         ))}
       </div>
+        </>
+      )}
 
-      {/* <ClickZoom/> */}
+        {
+          pickedCar && <ClickZoom setPickedCar={setPickedCar}/>
+        }
 
     </div>
   )
