@@ -1,7 +1,7 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { assets } from '../assets'
-import {motion} from 'motion/react'
+import {motion,AnimatePresence} from 'motion/react'
 
 const footerData=[
   {
@@ -47,6 +47,20 @@ const footerData=[
 
 const Footer = () => {
   const [open,setOpen]=useState(null)
+
+  const [mobileSize,setMobileSize]=useState(false)
+
+  useEffect(()=>{
+    const mobileSizeHandler=()=>{
+      setMobileSize(window.innerWidth < 1024)
+    }
+    mobileSizeHandler()
+
+    window.addEventListener("resize",mobileSizeHandler)
+    return()=>window.removeEventListener("resize",mobileSizeHandler)
+  },[])
+
+
   return (
     <div className='bg-neutral-100  pb-10 text-black w-full'>
       <div className='flex flex-col sm:flex-row gap-1 mx-3'>
@@ -76,21 +90,48 @@ const Footer = () => {
 
             <h2 className='text-lg font-mono'>{data.text}</h2>
 
-            <svg className={`sm:hidden transition-all duration-400 ${open === data.id ? "rotate-180 ": ""}`}             
+            <svg className={`sm:hidden transition-transform duration-300 ${open === data.id ? "rotate-180 ": ""}`}             
              xmlns="http://www.w3.org/2000/svg" width="24" height="24"  fill="currentColor" viewBox="0 0 24 24" >
             <path d="m12 15.41 5.71-5.7-1.42-1.42-4.29 4.3-4.29-4.3-1.42 1.42z"></path>
             </svg>
           </div>
 
-          <ul className={`mx-8 space-y-2 sm:space-y-5 mb-4 trasition-all sm:block ${open === data.id ? "block":"hidden"}`}>
-              {data.subText.map((sub,idx)=>(
-                <li
-                key={idx}
-                className='text-sm leading-tight hover:text-blue-600 active:text-blue-700 cursor-pointer w-fit '>
-                  {sub}
-                </li>
-              ))}
-            </ul>
+            {mobileSize ? (
+              <AnimatePresence>
+                {open === data.id && (
+                  <motion.ul
+                  layout
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="mx-8 space-y-2 mb-4 overflow-hidden">
+                    {data.subText.map((sub,idx)=>(
+                      <motion.li
+                      key={idx}
+                      initial={{ y: -10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ delay: idx * 0.03 }}
+                      className="text-sm hover:text-blue-600 cursor-pointer w-fit">
+                        {sub}
+
+                      </motion.li>
+                    ))}
+
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            ) : (
+              <ul className='mx-8 space-y-5 mb-4'>
+                {data.subText.map((sub, idx) => (
+                  <li
+                  key={idx}
+                  className="text-sm hover:text-blue-600 cursor-pointer w-fit">
+                    {sub}
+                  </li>
+                ))}
+              </ul>
+            )}
             </div>
         ))}
         
