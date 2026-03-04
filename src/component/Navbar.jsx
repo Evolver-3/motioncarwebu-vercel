@@ -5,16 +5,13 @@ import {motion} from 'motion/react'
 
 const navItems=[
   {
-    id:1,title:"Home",Link:""
+    id:1,title:"Inventory",Link:"#Section"
   },
   {
-    id:2,title:"Inventory",Link:""
+    id:2,title:"why us",Link:""
   },
   {
-    id:3,title:"why us",Link:""
-  },
-  {
-    id:4,title:"Testimonials",Link:""
+    id:3,title:"Testimonials",Link:""
   }
 ]
 
@@ -60,7 +57,9 @@ const Navbar = () => {
           animate={active ? {opacity:1,y:0}:{}}
           transition={{delay:1.6 +index * 0.2}}
           className='text-[12px] font-sans hover:text-white cursor-pointer hover:bg-neutral-600 px-1 py-1 rounded-sm hover:scale-105 transition-all duration-300 active:scale-95 active:text-blue-300 ease-in-out'>
+            <a href={item.Link}>
             {item.title}
+            </a>
           </motion.div>
         ))}
 
