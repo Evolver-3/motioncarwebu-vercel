@@ -5,7 +5,7 @@ import ColComp from './ColComp'
 import InfoComp from './InfoComp'
 import { carItems } from '../assets'
 
-const ClickZoom = () => {
+const ClickZoom = ({setPickedCar}) => {
 
   const [currentIdx,setCurrentIdx]=useState(0)
 
@@ -30,7 +30,7 @@ const ClickZoom = () => {
     setSelectedImage(currentCar.image)
   },[currentCar])
   return (
-    <div>
+    <div className='flex flex-col justify-around items-center h-screen'>
       <div className='w-full flex items-center justify-center relative'
       >
         <Info/>
@@ -90,6 +90,10 @@ const ClickZoom = () => {
           </svg>
         </button>
       </div>
+
+      <button className='px-4 py-2 ml-300 mb-10 bg-neutral-400 rounded-xl font-semibold '
+      onClick={()=>setPickedCar(false)}>
+        Go Back</button>
     </div>
   )
 }
