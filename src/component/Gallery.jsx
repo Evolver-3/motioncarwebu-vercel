@@ -1,6 +1,6 @@
 import React, {  useEffect, useState,useRef } from 'react'
 import { assets } from '../assets'
-import {AnimatePresence, motion} from 'motion/react'
+import {motion} from 'motion/react'
 
 const imageGallery=[assets.wall1,assets.wall2,assets.wall3,assets.wall4,assets.wall5,assets.wall6,assets.wall7,assets.wall8,assets.wall9,assets.wall10,assets.wall11,assets.wall12]
 

@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <div className='w-full bg-red-200 h-screen'>
 
-      <div className=' mx-4 my-2 flex flex-col gap-2 rounded-xl bg-blue-200 px-2 py-1'>
+      <div className=' mx-4 my-2 flex flex-col gap-2 rounded-xl bg-blue-200 px-2 py-1 overflow-hidden'>
 
         <Navbar/>
 

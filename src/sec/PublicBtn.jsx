@@ -9,7 +9,7 @@ const PublicBtn = ({filter,setFilter}) => {
     setFilter(value)
   }
   return (
-    <div className='text-center flex justify-center font-mono mt-5 items-center relative w-fit mx-auto  rounded-md py-1'>
+    <div className='relative grid grid-cols-4 w-full max-w-xl mx-auto border rounded-md overflow-hidden font-mono'>
 
       <div className={` absolute top-0 left-0 h-full w-1/4 bg-black rounded-md transition-all duration-300`}
       style={{
@@ -18,16 +18,16 @@ const PublicBtn = ({filter,setFilter}) => {
 
         <button
         onClick={()=>handleClick(0,"all")}
-        className={`z-10 px-3 py-1 sm:px-10 sm:py-2  ${active ===0 ? "text-white":"text-black"}`}>
-          All types</button>
+        className={`z-10 text-xl sm:text-2xl  ${active ===0 ? "text-white":"text-black"}`}>
+          All</button>
         <button
-        onClick={()=>handleClick(1,"petrol")}  className={`z-10 px-9 py-2  ${active ===1 ? "text-white":"text-black"}`}>
-          Petrol/Diesel</button>
+        onClick={()=>handleClick(1,"petrol")}  className={`z-10 text-xl sm:text-2xl  ${active ===1 ? "text-white":"text-black"}`}>
+          Petrol</button>
           <button
-        onClick={()=>handleClick(2,"diesel")}  className={`z-10 px-9 py-2  ${active ===2 ? "text-white":"text-black"}`}>
-          Petrol/Diesel</button>
+        onClick={()=>handleClick(2,"diesel")}  className={`z-10 text-xl sm:text-2xl  ${active ===2 ? "text-white":"text-black"}`}>
+          Diesel</button>
         <button
-        onClick={()=>handleClick(3,"electric")}  className={`z-10 px-10 py-2 ${active ===3 ? "text-white":"text-black"}`}>
+        onClick={()=>handleClick(3,"electric")}  className={`z-10 text-xl sm:text-2xl  ${active ===3 ? "text-white":"text-black"}`}>
           Electric</button>
         
     </div>

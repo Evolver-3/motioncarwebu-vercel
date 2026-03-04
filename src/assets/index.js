@@ -42,11 +42,13 @@ import trans from './Ele/car2/Transparent.webp'
 import whiteele from './Ele/car2/white.webp'
 
 
+import cartire from './cartire.webp'
+
 
 
 
 export const assets={
-  redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12,sign,logo,ele1,ele2,blueele,redele,greyele,metalele,trans,whiteele,
+  redM2,blackM2,grayM2,lightM2,BlueM2,M5,sapphire,white,blue,Gray,grey,wall1,wall2,wall3,wall4,wall5,wall6,wall7,wall8,wall9,wall10,wall11,wall12,sign,logo,ele1,ele2,blueele,redele,greyele,metalele,trans,whiteele,cartire
 }
 
 

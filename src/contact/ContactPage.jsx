@@ -1,6 +1,5 @@
 import {motion} from 'motion/react'
-import { assets } from '../assets'
-import React from 'react'
+import React,{useState} from 'react'
 import PhoneCard from './PhoneCard'
 const ContactPage = () =>{
 
@@ -28,7 +27,7 @@ const ContactPage = () =>{
     }
   }
 
-   const [result, setResult] = React.useState("");
+   const [result, setResult] =useState();
 
   const onSubmit = async (event) => {
     event.preventDefault();

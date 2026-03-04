@@ -35,19 +35,21 @@ const Section = () => {
 })
 
   return (
-    <div className='my-14 space-y-8  bg-linear-to-b from-sky-200 to-rose-200 via-sky-300 h-screen' id='Section'
+    <div className='my-10 py-10 space-y-8  bg-linear-to-b from-sky-200 to-rose-200 via-sky-300 h-screen' id='Section'
     ref={sectionRef}>
       
       <PublicBtn filter={filter} setFilter={setFilter}/>
 
-      <div className='grid grid-cols-3 gap-10 my-10 mx-10'>
+      <div className='grid grid-cols-3 '>
         {filteredCars.map((filtercar)=>(
-          <div key={filtercar.id}>
+          <div key={filtercar.id} className='border border-neutral-300 flex sm:flex-row flex-col items-center'>
            <img src={filtercar.image}
-           alt={filtercar.model} className='w-60 h-50'/>
+           alt={filtercar.model} className='size-50 px-2'/>
 
-           <h2>{filtercar.model}</h2>
-           <p>{filtercar.specs.Fuel}</p>
+           <div className='px-6 bg-neutral-200'>
+            <h2 className='text-xl font-semibold'>{filtercar.model}</h2>
+           <p className='text-sm'>{filtercar.specs.Fuel}</p>
+           </div>
           </div>
         ))}
       </div>
