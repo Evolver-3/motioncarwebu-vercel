@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-const PublicBtn = ({filter,setFilter}) => {
+const PublicBtn = ({setFilter}) => {
 
-  const [active,setActive]=useState(null)
+  const [active,setActive]=useState(0)
 
   const handleClick=(index,value)=>{
     setActive(index)

@@ -15,7 +15,7 @@ const Gallery = () => {
 
       while(currentIndex !== 0 ){
         randomIndex=Math.floor(Math.random()* currentIndex)
-        currentIndex--
+        currentIndex--;
 
         [newArray[currentIndex],newArray[randomIndex]]=[newArray[randomIndex], newArray[currentIndex]]
       }
@@ -29,15 +29,14 @@ const Gallery = () => {
      useEffect(()=>{
       let duration=setInterval(()=>{
         shuffleSquares()
+  
       },2000)
 
       return()=>clearInterval(duration)
       
     },[])
 
-    useEffect(() => {
-  console.log("Initial imagePosition:", imagePosition)
-}, [])
+
 
   return (
 

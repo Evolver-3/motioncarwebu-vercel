@@ -47,7 +47,8 @@ const Section = () => {
 
       <div className='grid grid-cols-3 '>
         {filteredCars.map((filtercar)=>(
-          <div key={filtercar.id} className='border border-neutral-300 flex sm:flex-row flex-col items-center' 
+          <div key={filtercar.id}
+          className='border border-neutral-300 flex sm:flex-row flex-col items-center' 
           onClick={()=>setPickedCar(!pickedCar)}>
            <img src={filtercar.image}
            alt={filtercar.model} className='size-50 px-2'/>

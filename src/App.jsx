@@ -14,8 +14,7 @@ const App = () => {
     <ContactPage/>
    
     <Footer/>
-    
-    
+  
     
     </div>
   )
