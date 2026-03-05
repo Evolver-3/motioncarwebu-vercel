@@ -2,7 +2,7 @@ import React, {  useEffect, useState,useRef } from 'react'
 import { assets } from '../assets'
 import {motion} from 'motion/react'
 
-const imageGallery=[assets.wall1,assets.wall2,assets.wall3,assets.wall4,assets.wall5,assets.wall6,assets.wall7,assets.wall8,assets.wall9,assets.wall10,assets.wall11,assets.wall12]
+const imageGallery=[{id:1, src: assets.wall1}, {id:2, src: assets.wall2}, {id:3, src: assets.wall3}, {id:4, src: assets.wall4}, {id:5, src: assets.wall5}, {id:6, src: assets.wall6}, {id:7, src: assets.wall7}, {id:8, src: assets.wall8}, {id:9, src: assets.wall9}, {id:10, src: assets.wall10}, {id:11, src: assets.wall11}, {id:12, src: assets.wall12}]
 
 const Gallery = () => {
 
@@ -39,7 +39,7 @@ const Gallery = () => {
       <div className='grid sm:grid-cols-4 grid-cols-3 gap-1 my-2'>
         {imagePosition.map((img)=>(
           <motion.div
-          key={img}
+          key={img.id}
           layout
           transition={{
             duration:0.2,
@@ -48,7 +48,7 @@ const Gallery = () => {
           }}
           className='w-full h-33 sm:h-45 overflow-hidden rounded-sm bg-no-repeat bg-cover'
           style={{
-            backgroundImage:`url(${img})`
+            backgroundImage:`url(${img.src})`
           }}
           >
           </motion.div>

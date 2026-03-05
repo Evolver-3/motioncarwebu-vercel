@@ -11,7 +11,8 @@ const PublicBtn = ({filter,setFilter}) => {
   return (
     <div className='relative grid grid-cols-4 w-full max-w-xl mx-auto border rounded-md overflow-hidden font-mono'>
 
-      <div className={` absolute top-0 left-0 h-full w-1/4 bg-black rounded-md transition-all duration-300`}
+      <div className={`absolute top-0 left-0 h-full w-1/4 bg-black rounded-md transition-all duration-300`}
+
       style={{
         transform:`translateX(${active*100}% )`
       }}></div>
