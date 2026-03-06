@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const ColComp=({car,setSelectedImage})=>{
+const ColComp=({currentCar,setSelectedImage})=>{
 
-  if(!car.imageVariant)return null;
+  if(!currentCar.imageVariant)return null;
 
-  const variants=Array.isArray(car.imageVariant) ? car.imageVariant : Object.values(car.imageVariant)
+  const variants=Array.isArray(currentCar.imageVariant) ? currentCar.imageVariant : Object.values(currentCar.imageVariant)
 
   return (
     <div className='flex gap-2 p-3 '>
