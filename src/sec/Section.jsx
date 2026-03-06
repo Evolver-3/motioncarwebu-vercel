@@ -1,4 +1,4 @@
-import {motion , AnimatePresence} from 'motion/react'
+
 import { useEffect, useState,useRef } from 'react'
 import PublicBtn from './PublicBtn'
 import ClickZoom from './ClickZoom'
@@ -46,10 +46,11 @@ const Section = () => {
         <PublicBtn filter={filter} setFilter={setFilter}/>
 
       <div className='grid grid-cols-3 '>
-        {filteredCars.map((filtercar)=>(
+        {filteredCars.map((filtercar,index)=>(
           <div key={filtercar.id}
           className='border border-neutral-300 flex sm:flex-row flex-col items-center' 
-          onClick={()=>setPickedCar(!pickedCar)}>
+
+          onClick={()=>setPickedCar(index)}>
            <img src={filtercar.image}
            alt={filtercar.model} className='size-50 px-2'/>
 
@@ -64,7 +65,7 @@ const Section = () => {
       )}
 
         {
-          pickedCar && <ClickZoom setPickedCar={setPickedCar}/>
+          pickedCar && <ClickZoom pickedCar={pickedCar} setPickedCar={setPickedCar}/>
         }
 
     </div>
