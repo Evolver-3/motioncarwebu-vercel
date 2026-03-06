@@ -5,9 +5,9 @@ import ColComp from './ColComp'
 import InfoComp from './InfoComp'
 import { carItems } from '../assets'
 
-const ClickZoom = ({setPickedCar}) => {
+const ClickZoom = ({pickedCar,setPickedCar}) => {
 
-  const [currentIdx,setCurrentIdx]=useState(0)
+  const [currentIdx,setCurrentIdx]=useState(pickedCar)
 
   const currentCar=carItems[currentIdx];
 
@@ -19,26 +19,37 @@ const ClickZoom = ({setPickedCar}) => {
   const prevPage=()=>{
     setCurrentIdx((p)=>
     p === 0 ? carItems.length-1 : p-1)
-
   }
 
   const [clicked,setClicked]=useState(false)
 
-  const [selectedImage,setSelectedImage]=useState(null)
+  useEffect(()=>{
+    const handleKey=(e)=>{
+      if(e.key==="ArrowRight") nextPage()
+      if(e.key ==="ArrowLeft") prevPage()
+    }
+  window.addEventListener("keydown",handleKey)
+  return()=>window.removeEventListener("keydown",handleKey)
+  },[])
+
+  const [selectedImage,setSelectedImage]=useState(currentCar.image)
 
   useEffect(()=>{
     setSelectedImage(currentCar.image)
+
   },[currentCar])
+
+
   return (
     <div className='flex flex-col justify-around items-center h-screen'>
       <div className='w-full flex items-center justify-center relative'
       >
         <Info/>
 
-          <motion.div className=' flex flex-col relative z-20  text-neutral-200 font-bold font-serif text-shadow-md' key={currentCar.id}>
+          <motion.div className=' flex flex-col relative z-20  text-neutral-200 font-bold font-serif text-shadow-md' key={currentIdx}>
 
-            <h2 className='sm:text-[250px] text-9xl leading-none'>BMW</h2>
-            <h5 className='text-5xl font-mono'>{carItems[currentIdx].model}</h5>
+            <h2 className='sm:text-[250px] text-9xl leading-none text-neutral-500'>BMW</h2>
+            <h5 className='text-5xl font-mono text-neutral-400'>{currentCar.model}</h5>
 
              <motion.img
                 animate={{
@@ -46,8 +57,7 @@ const ClickZoom = ({setPickedCar}) => {
                   opacity:clicked? 1:0.8
                 }}
                 transition={{duration:0.6}}
-                style={{zIndex:clicked? 30:0}}
-                src={selectedImage  || currentCar.image} className='absolute 5 h-60 top-68  z-0' onClick={()=>setClicked(!clicked)}/>
+                src={selectedImage} className='absolute left-5 h-60 top-68  z-0' onClick={()=>setClicked(!clicked)}/>
 
           <AnimatePresence>
             {clicked && (
@@ -57,9 +67,9 @@ const ClickZoom = ({setPickedCar}) => {
             exit={{opacity:0, scale:0.5}}
             className='absolute -right-1/4 top-1/2  rounded-md ring ring-neutral-400 bg-neutral-300 text-black py-10 px-5'>
 
-              <ColComp car={currentCar} setSelectedImage={setSelectedImage}/>
-              <InfoComp car={currentCar}/>
-              <button className='absolute top-0 right-0 px-2 py-1 bg-red-400 rounded-full text-white font-semibold ' onClick={()=>setClicked(false)}>
+              <ColComp currentCar={currentCar} setSelectedImage={setSelectedImage}/>
+              <InfoComp pickedCar={currentCar}/>
+              <button className='absolute top-0 right-0 px-2 py-1 bg-red-400 rounded-full text-white font-semibold' onClick={()=>setClicked(false)}>
                 X
               </button>
 
@@ -91,8 +101,8 @@ const ClickZoom = ({setPickedCar}) => {
         </button>
       </div>
 
-      <button className='px-4 py-2 ml-300 mb-10 bg-neutral-400 rounded-xl font-semibold '
-      onClick={()=>setPickedCar(false)}>
+      <button className='px-4 py-2 sm:ml-300 ml-120 sm:mb-10 bg-neutral-400 rounded-xl font-semibold '
+      onClick={()=>setPickedCar(null)}>
         Go Back</button>
     </div>
   )
